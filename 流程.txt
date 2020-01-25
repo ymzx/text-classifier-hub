@@ -1,0 +1,44 @@
+#Text Classificationㄩ
+1ㄛDataset Preparation
+2ㄛFeature Engineering
+3ㄛModel Training
+4ㄛImprove Performance of Text Classifier
+
+#libraries for dataset preparation, feature engineering, model training 
+Pandas
+Scikit-learn
+XGBoost
+TextBlob
+Keras
+-------------------------
+from sklearn import model_selection, preprocessing, linear_model, naive_bayes, metrics, svm
+from sklearn.feature_extraction.text import TfidfVectorizer, CountVectorizer
+from sklearn import decomposition, ensemble
+import pandas, xgboost, numpy, textblob, string
+from keras.preprocessing import text, sequence
+from keras import layers, models, optimizers
+-------
+
+# Word Embeddings 
+ Glove, FastText, and Word2Vec
+1,Loading the pretrained word embeddings
+2,Creating a tokenizer object
+3,Transforming text documents to sequence of tokens and pad them
+4,Create a mapping of token and their respective embeddings
+
+# Text / NLP based features
+A number of extra text based features can also be created which sometimes are helpful for improving text classification models. Some examples are:
+1,Word Count of the documents 每 total number of words in the documents
+2,Character Count of the documents 每 total number of characters in the documents
+3,Average Word Density of the documents 每 average length of the words used in the documents
+4,Puncutation Count in the Complete Essay 每 total number of punctuation marks in the documents
+5,Upper Case Count in the Complete Essay 每 total number of upper count words in the documents
+6,Title Word Count in the Complete Essay 每 total number of proper case (title) words in the documents
+7,Frequency distribution of Part of Speech Tags:
+    Noun Count
+    Verb Count
+    Adjective Count
+    Adverb Count
+    Pronoun Count
+Can also use Topic Models as features
+
