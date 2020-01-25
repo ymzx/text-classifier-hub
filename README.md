@@ -1,7 +1,7 @@
 # text-classifier-hub
 *text classifier hub*
 
-### 词向量生成模型to-do list
+### 词向量生成模型 to-do list
 - [x] word2vec
 - [x] fasttext
 - [ ] glove
