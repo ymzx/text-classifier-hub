@@ -4,17 +4,17 @@
 # @Email   : 494056012@qq.com
 # @File    : main.py
 # @Software: PyCharm
-from utils.load_dataset_and_create_dataframe import load_dataset, create_dataframe
-from utils.split_dataset import split_dataset
-from utils.feature_engineering import Vectors
-from config.config import *
-from utils.data_cleaning import data_clean
-from utils.data_normalization import data_normalization
+from util.load_dataset_and_create_dataframe import load_dataset, create_dataframe
+from util.split_dataset import split_dataset
+from util.feature_engineering import Vectors
+from configs.config import *
+from util.data_cleaning import data_clean
+from util.data_normalization import data_normalization
 from model.classifier_algorithm import classifier_hub
 import matplotlib.pyplot as plt
-from utils.word_embedding_corpus import word_embedding_corpus
-from utils.text2txt import save2txt
-from utils.train_words_vectors import run
+from util.word_embedding_corpus import word_embedding_corpus
+from util.text2txt import save2txt
+from util.train_words_vectors import run
 import numpy as np, time
 
 

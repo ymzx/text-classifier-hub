@@ -2,7 +2,7 @@
 # @Time    : 2020/1/14
 # @Author  : JWDUAN
 # @Email   : 494056012@qq.com
-# @File    : config.py
+# @File    : configs.py
 # @Software: PyCharm
 import numpy, os, sys, warnings
 

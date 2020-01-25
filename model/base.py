@@ -4,8 +4,8 @@
 # @Email   : 494056012@qq.com
 # @File    : base.py
 # @Software: PyCharm
-from utils.get_sentences import GetSentences
-from config.config import word2vec_model_path, fasttext_model_path
+from util.get_sentences import GetSentences
+from configs.config import word2vec_model_path, fasttext_model_path
 
 class Base(object):
     def __init__(self):

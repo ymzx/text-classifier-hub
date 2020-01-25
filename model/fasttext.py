@@ -6,7 +6,7 @@
 # @Software: PyCharm
 from model.base import Base
 from gensim.models import FastText
-from config.config import embedding_length
+from configs.config import embedding_length
 
 class FastTextTrain(Base):
     def main(self):

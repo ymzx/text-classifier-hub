@@ -15,10 +15,10 @@ from sklearn.svm import SVC
 from xgboost import XGBClassifier
 import lightgbm
 import matplotlib.pyplot as plt, os, numpy
-from utils.neural_net import NN
+from util.neural_net import NN
 from sklearn.preprocessing import LabelEncoder
 from keras.utils import np_utils
-from config.config import classifier_model_param_path, input_dim, output_dim
+from configs.config import classifier_model_param_path, input_dim, output_dim
 
 def precision_recall_accuracy_f1(y, y_pre, classes=1):
     '''

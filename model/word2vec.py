@@ -6,7 +6,7 @@
 # @Software: PyCharm
 from gensim.models import word2vec
 from model.base import Base
-from config.config import embedding_length
+from configs.config import embedding_length
 
 class Word2VecTrain(Base):
 

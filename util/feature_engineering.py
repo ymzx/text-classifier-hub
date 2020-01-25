@@ -19,7 +19,7 @@ import numpy
 from gensim.models import word2vec
 from gensim.models import FastText
 from model.base import  Base
-from config.config import embedding_length, vectors_model, filters, zero_embedding_vector
+from configs.config import embedding_length, vectors_model, filters, zero_embedding_vector
 
 class Vectors(Base):
     def __init__(self, vectors_model):

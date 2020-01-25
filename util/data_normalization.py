@@ -6,7 +6,7 @@
 # @Software: PyCharm
 from sklearn.preprocessing import MinMaxScaler, Normalizer, StandardScaler
 from sklearn.externals import joblib
-from config.config import normalization_param_path
+from configs.config import normalization_param_path
 import os
 
 def data_normalization(X, normalization=None):

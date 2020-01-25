@@ -4,7 +4,7 @@
 # @Email   : 494056012@qq.com
 # @File    : get.py
 # @Software: PyCharm
-from config.config import text_corpus_path
+from configs.config import text_corpus_path
 from nltk.corpus import stopwords
 
 class GetSentences(object):

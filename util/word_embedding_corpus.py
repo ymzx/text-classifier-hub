@@ -4,7 +4,7 @@
 # @Email   : 494056012@qq.com
 # @File    : word_embedding_corpus.py
 # @Software: PyCharm
-from config.config import sentence_sign
+from configs.config import sentence_sign
 import re
 
 def get_sentence(data):

@@ -4,7 +4,7 @@
 # @Email   : 494056012@qq.com
 # @File    : data_cleaning.py
 # @Software: PyCharm
-from config. config import filters
+from configs. config import filters
 
 def lower(data):
     for i, ele in enumerate(data):

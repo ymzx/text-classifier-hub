@@ -7,7 +7,7 @@
 import sys
 from model.word2vec import Word2VecTrain
 from model.fasttext import FastTextTrain
-from config.config import vectors_model
+from configs.config import vectors_model
 
 
 

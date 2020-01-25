@@ -1,5 +1,5 @@
 # text-classifier-hub
-*text classifier hub*
+*text classifier hub* 一站式文本分类解决方案
 
 ### 词向量生成模型 to-do list
 - [x] word2vec
