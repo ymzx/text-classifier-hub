@@ -37,9 +37,13 @@ normalization_param_path = os.path.join(base_dir, r'ckpt\normalization_param')
 # 需过滤的符号
 filters='0123456789“”！《》—’”!"#$ %&()*+,./: ;<=>?@[\]^_`{|}~\t\n'
 
+# 是否去除英文停用词
+delete_stop_words_flag = False
+
 # 句子间隔符,中文以句号"。"w作为句子结束,英文一般以"."作为句子结束,
 # 但是英文特殊场合也会用到".",例如"Mr.",用'|'隔开, '\'为转义字符
-sentence_sign = "\.|。"
+# 以段落为样本 sentence_sign = "。";以句子为样本 sentence_sign = "\.|。"
+sentence_sign = "。"
 
 # 分类算法输入和输出数据维度
 input_dim = 200
@@ -47,6 +51,6 @@ output_dim = 2
 
 # 指定分类器
 # ['GBDT', 'LR', 'AdaBoost', 'LGBM', 'RF', 'XGBoost', 'SVM', 'NB', 'NN'] 可选算法
-classifier_list = ['NN']
+classifier_list = ['GBDT', 'LR', 'AdaBoost', 'LGBM', 'RF', 'XGBoost', 'SVM', 'NB', 'NN']
 
 

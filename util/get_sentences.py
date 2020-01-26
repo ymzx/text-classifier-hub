@@ -6,6 +6,7 @@
 # @Software: PyCharm
 from configs.config import text_corpus_path
 from nltk.corpus import stopwords
+from configs.config import delete_stop_words_flag
 
 class GetSentences(object):
 
@@ -18,8 +19,8 @@ class GetSentences(object):
             sentences = []
             for line in lines:
                 if not line:continue
-                line = self.delete_stop_words(line)
-                sentences.append([s for s in line.split() if s != '\n'])
+                if delete_stop_words_flag: line = self.delete_stop_words(line)
+                sentences.append([s for s in line.lower().split() if s != '\n'])
             return sentences
 
     def delete_stop_words(self, text):

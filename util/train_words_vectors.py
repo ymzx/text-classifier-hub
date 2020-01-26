@@ -4,11 +4,9 @@
 # @Email   : 494056012@qq.com
 # @File    : train_vectors.py
 # @Software: PyCharm
-import sys
 from model.word2vec import Word2VecTrain
 from model.fasttext import FastTextTrain
 from configs.config import vectors_model
-
 
 
 def run(model):
