@@ -1,6 +1,6 @@
 # text-classifier-hub
 *text or data classifier hub* 一站式文本和数据分类解决方案
-
+---------
 ### Background 
 以一个英文假新闻预测为例，提供一站式文本和数据分类解决方案。
 - data
@@ -11,7 +11,12 @@
         - author：新闻文章的作者
         - text：文章的文本；可能不完整
         - label：将文章标记为可能不可靠的标签，1为假新闻, 0为真新闻
+-----
+### 流程
 
+   ![流程图](https://github.com/ymzx/text-classifier-hub/blob/master/pics/flow/flow.png?raw=true)
+
+---------
 ### Results
 - ROC曲线以及AUC值（以case3为例）
 
@@ -21,7 +26,8 @@
     | 分类器 | 准确率 | 召回率 | 正确率 | F1 | AUC |
     |:--------:|:--------:|:-------:|:--------:|:----:|:-----:|
     |GBDT |0.95| 0.959| 0.954 |0.955| 0.991|
-    
+
+---- 
 ### 词向量生成模型 to-do list
 - [x] word2vec
 - [x] fasttext
@@ -42,7 +48,7 @@
 
 ### 计算性能优化 to-do list
 - [ ] 去除停用词计算性能(耗时12分钟，占整体耗时55%)
-
+------
 ### config.py
 - classifier_list：指定分类器
 - input_dim 和 output_dim：指定NN分类器的输入和输出维度
@@ -64,7 +70,7 @@
 - 改动词向量长度时，需要同时改变NN分类器的输入维度
 - 只要词向量语料库改变时，需要重新生成词向量，train_word_embedding_flag = True
 - 程序运行，pycharm(2018)环境,run main.py 
-
+--------
 ### 词向量语料库构建中，以段落为样本，还是以句子为样本？(以word2vec为例)
 - 以段落为样本
     > Of course, we now know that this was not the case . Comey was actually saying that it was reviewing the emails in light of “an unrelated case”–which we now know to be Anthony Weiner’s sexting with a teenager. But apparently such little things as facts didn’t matter to Chaffetz. The Utah Republican had already vowed to initiate a raft of investigations if Hillary wins–at least two years’ worth, and possibly an entire term’s worth of them. Apparently Chaffetz thought the FBI was already doing his work for him–resulting in a tweet that briefly roiled the nation before cooler heads realized it was a dud. 
