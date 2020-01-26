@@ -70,6 +70,7 @@
 - 改动词向量长度时，需要同时改变NN分类器的输入维度
 - 只要词向量语料库改变时，需要重新生成词向量，train_word_embedding_flag = True
 - 程序运行，pycharm(2018)环境,run main.py 
+- 环境要求，python 3.x, keras, nltk, numpy, sklearn, gensim, pandas, 版本要求较松，建议最新版
 --------
 ### 词向量语料库构建中，以段落为样本，还是以句子为样本？(以word2vec为例)
 - 以段落为样本
