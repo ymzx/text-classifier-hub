@@ -125,6 +125,7 @@
     |NN |0.871 |0.88| 0.875| 0.876| 0.948|
 ***正确率最大为0.944，对应分类器为LGBM***
 ### ROC曲线以及AUC值（以case3为例）
+
 ![ROC曲线](https://github.com/ymzx/text-classifier-hub/blob/master/pics/sentence_with_delete_stopwords/graph.png?raw=true)
 
 
