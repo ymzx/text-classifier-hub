@@ -26,6 +26,9 @@ vectors_model = 'word2vec'
 # 是否重新训练词向量
 train_word_embedding_flag = True
 
+# 是否去除英文停用词
+delete_stop_words_flag = True
+
 # 调用词向量路径
 word2vec_model_path = os.path.join(base_dir, r'ckpt\word2vec\word2vec.model')
 fasttext_model_path = os.path.join(base_dir, r'ckpt\fasttext\fasttext.model')
@@ -35,10 +38,7 @@ classifier_model_param_path = os.path.join(base_dir, r'ckpt\classifier_model_par
 normalization_param_path = os.path.join(base_dir, r'ckpt\normalization_param')
 
 # 需过滤的符号
-filters='0123456789“”！《》—’”!"#$ %&()*+,./: ;<=>?@[\]^_`{|}~\t\n'
-
-# 是否去除英文停用词
-delete_stop_words_flag = False
+filters = '0123456789“”！《…》—’”!"#$ %&()*+,./: ;<=>?@[\]^_`{|}~\t\n' # 不能加r
 
 # 句子间隔符,中文以句号"。"w作为句子结束,英文一般以"."作为句子结束,
 # 但是英文特殊场合也会用到".",例如"Mr.",用'|'隔开, '\'为转义字符
