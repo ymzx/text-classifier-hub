@@ -24,7 +24,7 @@ zero_embedding_vector = numpy.zeros((embedding_length))
 vectors_model = 'word2vec'
 
 # 是否重新训练词向量
-train_word_embedding_flag = False
+train_word_embedding_flag = True
 
 # 调用词向量路径
 word2vec_model_path = os.path.join(base_dir, r'ckpt\word2vec\word2vec.model')
@@ -43,7 +43,7 @@ delete_stop_words_flag = False
 # 句子间隔符,中文以句号"。"w作为句子结束,英文一般以"."作为句子结束,
 # 但是英文特殊场合也会用到".",例如"Mr.",用'|'隔开, '\'为转义字符
 # 以段落为样本 sentence_sign = "。";以句子为样本 sentence_sign = "\.|。"
-sentence_sign = "。"
+sentence_sign = "\.|。"
 
 # 分类算法输入和输出数据维度
 input_dim = 200
