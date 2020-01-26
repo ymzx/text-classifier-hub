@@ -1,6 +1,16 @@
 # text-classifier-hub
-*text classifier hub* 一站式文本分类解决方案
+*text or data classifier hub* 一站式文本和数据分类解决方案(_text as example_)
 
+### Results
+- ROC曲线以及AUC值（以case3为例）
+
+    ![ROC曲线](https://github.com/ymzx/text-classifier-hub/blob/master/pics/sentence_with_delete_stopwords/graph.png?raw=true)
+- 较优结果分类器为GBDT，词向量长度为100，去除停用词，详情如下
+
+    | 分类器 | 准确率 | 召回率 | 正确率 | F1 | AUC |
+    |:--------:|:--------:|:-------:|:--------:|:----:|:-----:|
+    |GBDT |0.95| 0.959| 0.954 |0.955| 0.991|
+    
 ### 词向量生成模型 to-do list
 - [x] word2vec
 - [x] fasttext
@@ -42,6 +52,7 @@
 ### 注意
 - 改动词向量长度时，需要同时改变NN分类器的输入维度
 - 只要词向量语料库改变时，需要重新生成词向量，train_word_embedding_flag = True
+- 程序运行，pycharm(2018)环境,run main.py 
 
 ### 词向量语料库构建中，以段落为样本，还是以句子为样本？(以word2vec为例)
 - 以段落为样本
@@ -124,9 +135,6 @@
     |NB |0.805 |0.824 |0.813 |0.815 |0.882|
     |NN |0.871 |0.88| 0.875| 0.876| 0.948|
 ***正确率最大为0.944，对应分类器为LGBM***
-### ROC曲线以及AUC值（以case3为例）
-
-![ROC曲线](https://github.com/ymzx/text-classifier-hub/blob/master/pics/sentence_with_delete_stopwords/graph.png?raw=true)
 
 
 
