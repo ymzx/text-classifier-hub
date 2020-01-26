@@ -22,6 +22,27 @@
 ### 计算性能优化 to-do list
 - [ ] 去除停用词计算性能(耗时12分钟，占整体耗时55%)
 
+### config.py
+- classifier_list：指定分类器
+- input_dim 和 output_dim：指定NN分类器的输入和输出维度
+- filters：文本中需要过滤的符号
+- delete_stop_words_flag：是否去除停用词语
+- vectors_model：选择词向量模型
+- train_word_embedding_flag：是否重新训练词向量
+- zero_embedding_vector：零向量
+- base_dir：main.py函数运行路径
+- text_corpus_path：词向量训练所需的语料库的路径
+- data_path：原始数据路径
+- embedding_length：指定词向量长度
+- word2vec_model_path 和 fasttext_model_path：生成词向量模型参数路径
+- normalization_param_path：归一化参数文件路径
+- sentence_sign：句子标识符
+- warnings.filterwarnings("ignore")：忽略警告
+
+### 注意
+- 改动词向量长度时，需要同时改变NN分类器的输入维度
+- 只要词向量语料库改变时，需要重新生成词向量，train_word_embedding_flag = True
+
 ### 词向量语料库构建中，以段落为样本，还是以句子为样本？(以word2vec为例)
 - 以段落为样本
     > Of course, we now know that this was not the case . Comey was actually saying that it was reviewing the emails in light of “an unrelated case”–which we now know to be Anthony Weiner’s sexting with a teenager. But apparently such little things as facts didn’t matter to Chaffetz. The Utah Republican had already vowed to initiate a raft of investigations if Hillary wins–at least two years’ worth, and possibly an entire term’s worth of them. Apparently Chaffetz thought the FBI was already doing his work for him–resulting in a tweet that briefly roiled the nation before cooler heads realized it was a dud. 
@@ -103,6 +124,10 @@
     |NB |0.805 |0.824 |0.813 |0.815 |0.882|
     |NN |0.871 |0.88| 0.875| 0.876| 0.948|
 ***正确率最大为0.944，对应分类器为LGBM***
+### ROC曲线以及AUC值（以case3为例）
+![ROC曲线](https://github.com/ymzx/text-classifier-hub/blob/master/pics/sentence_with_delete_stopwords/graph.png?raw=true)
+
+
 
 
 
